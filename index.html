@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/4213748bae.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<div>
+    <div class="container" id="printThis infoprint">
+        <div class="top">
+            <h1>Resume Builder</h1>
+            <p>This design is recommended by Google | Microsoft | Amazon Worker's</p>
+        </div>
+
+        <div class="info" id="infoprint">
+            <!-- left part ............. -->
+            <div class="leftinfo infos">
+                <h2>Personal Information</h2>
+
+                <div class="data">
+                    <label for="name">Your Name<span>*</span></label><br>
+                    <input type="text" name="name" id="name" class="name" placeholder="Enter Your Name" required>
+                </div>
+
+                <div class="data">
+                    <label for="number">Your Phone Number<span>*</span></label><br>
+                    <input type="number" name="number" id="number" class="number" placeholder="Enter Your Phone Number"
+                        required>
+                </div>
+
+
+                <div class="data">
+                    <label for="email">Your Email<span>*</span></label><br>
+                    <input type="email" name="email" id="email" class="email" placeholder="Enter Your Email" required>
+                </div>
+
+
+                <div class="data">
+                    <label for="photo">Photo<span>*</span></label><br>
+                    <input type="file" name="photo" id="photo" class="photo" required>
+                </div>
+
+
+                <div class="data">
+                    <label for="prof">You Expert<span>*</span></label><br>
+                    <input type="text" name="prof" id="prof" class="prof"
+                        placeholder="Web Developer, Android Developer etc..." required>
+                </div>
+
+
+
+                <div class="data">
+                    <label for="address">Your Address<span>*</span></label><br>
+                    <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter Your Address"
+                        class="address" required></textarea>
+
+                </div>
+
+
+                <div class="data">
+                    <label for="skill">Skills<span>*</span></label><br>
+                    <input type="text" name="skill" id="skill" class="skill"
+                        placeholder="HTML, CSS, JAVASCRIPT, REACT, BOOTSTRAP, C, C++, DSA ETC..." required>
+                </div>
+
+                <h3>Important Links</h3>
+
+                <div class="data">
+                    <label for="linkedin">LinkedIn</label><br>
+                    <input type="text" name="linkedin" id="linkedin" class="linkedin"
+                        placeholder="https://linkedin.com/example">
+                </div>
+
+                <div class="data">
+                    <label for="facebook">Facebook</label><br>
+                    <input type="text" name="facebook" id="facebook" class="facebook"
+                        placeholder="https://facebook.com/example">
+                </div>
+
+
+                <div class="data">
+                    <label for="github">GitHub</label><br>
+                    <input type="text" name="github" id="github" class="github"
+                        placeholder="https://github.com/example">
+                </div>
+
+
+                <div class="data">
+                    <label for="twitter">Twitter</label><br>
+                    <input type="text" name="twitter" id="twitter" class="twitter"
+                        placeholder="https://twitter.com/example">
+                </div>
+
+                <div class="data">
+                    <label for="instagram">Instagram</label><br>
+                    <input type="text" name="instagram" id="instagram" class="instagram"
+                        placeholder="https://instagram.com/example">
+                </div>
+
+
+            </div>
+
+
+            <!-- Right part.......... -->
+            <div class="rightinfo infos">
+                <h2>Professional Information</h2>
+
+                <div class="data">
+                    <label for="objective">About<span>*</span></label><br>
+                    <textarea name="objective" id="objective" class="objective" placeholder="Describe Yourself"
+                        required></textarea>
+
+                </div>
+
+                <!-- work Experience............ -->
+                <div class="data" id="we">
+                    <label for="work">Work Experience<span>*</span></label><br>
+                    <textarea name="work" id="work" class="work weField" required
+                        placeholder="Enter Your Work Experience"></textarea>
+
+                    <div class="newtext" id="workadd"></div>
+                </div>
+
+                <div class="button" id="weAddButton">
+                    <button onclick="addNewwork()" class="button-73" role="button">Add</button>
+
+                </div>
+
+
+                <!-- qualifications.......... -->
+
+
+                <div class="data" id="aq">
+                    <label for="academic">Academic Qualification<span>*</span></label><br>
+                    <textarea name="academic" id="academic" class="academic aqField" required
+                        placeholder="Enter Your Academic Qualification"></textarea>
+
+                    <div class="newtext" id="academicadd"></div>
+                </div>
+
+                <div class="button">
+                    <button onclick="addNewAcademy()" class="button-73" role="button">Add</button>
+
+                </div>
+
+                <!-- <div class="data">
+                <label for="address">Objective<span>*</span></label><br>
+                <textarea name="address" id="address" class="address" required></textarea>
+
+            </div> -->
+
+
+            </div>
+
+        </div>
+
+        <div class="cv">
+            <button class="button-92" role="button" onclick="generatecv()">Generate Resume</button>
+        </div>
+
+        <div class="foot">This Resume builder website is Crafted and build by <a
+                href="https://www.instagram.com/ekranjan23/" target="_blank">&copy; Ranjan
+                Kumar</a></div>
+
+
+    </div>
+
+
+    <!-- Template part of CV............. -->
+
+
+    <div class="template" id="content">
+        <div class="box">
+
+            <div class="part1">
+                <h1 id="Tname"> Ranjan Kumar</h1>
+                <p id="Tprof"> - Frontend Developer - </p>
+            </div>
+            <hr>
+            <div class="part2">
+                <img id="Tphoto" src="pic.jpg" alt="">
+            </div>
+
+            <div class="part3">
+                <span id="Temail">ekranjan23@gmail.com</span> | <span id="Tnumber">+91-7324002432</span> | <span
+                    id="Taddress">Muzaffarpur, Bihar</span>
+            </div>
+
+            <div class="part4">
+
+
+                <a id="Tlinkedin" href="#" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> </a>
+
+
+                <a id="Tgithub" href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i>
+                </a>
+
+
+                <a id="Ttwitter" href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i>
+                </a>
+
+
+                <a id="Tfacebook" href="#" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-facebook"></i> </a>
+
+                <a id="Tinstagram" href="#" target="_blank" rel="noopener noreferrer"><i
+                        class="fa-brands fa-instagram"></i> </a>
+
+            </div>
+            <div class="part5">
+                <div class="temleft">
+
+
+                    <div class="temabout herohero">
+                        <h4 class="hero">About me</h4>
+                        <p id="Tobjective"></p>
+                    </div>
+
+
+                    <div class="temskill herohero">
+                        <h4 class="hero">Skills</h4>
+                        <p id="Tskill">C++, C, Java, JavaScript</p>
+                    </div>
+
+                </div>
+                <div class="temright">
+                    <div class="temacademic herohero">
+                        <h4 class="hero">Educational Qualification</h4>
+                        <div id="Tad">
+
+                        </div>
+                    </div>
+
+                    <div class="temexperi herohero">
+                        <h4 class="hero">Experience</h4>
+                        <div id="Twe">
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="downloadcv">
+                <button class="button-30" role="button" onclick="printpage()">Download Resume</button>
+
+            </div>
+
+            <footer>This Resume builder website is Crafted and build by <a href="https://www.instagram.com/ekranjan23/"
+                    target="_blank">&copy; Ranjan
+                    Kumar</a></footer>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="index.js"></script>
+    </body>
+
+</html>
